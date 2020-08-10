@@ -87,29 +87,89 @@
 
 						<!--Latest Ideas-->
 						<article id="latest_ideas">
-							<h2 class="major">Projects Under Development</h2>
-							<span class="image main"><img src="images/about3.jpg" alt="" width="400" height="200"/></span>
-							<p>Welcome, this is the portfolio for Divyanshu Bhaik, you can also call me DV. My portfolio will help you take a quick look over my skill set and knowledge.</p>
-							<p>I am an Electronics and Communication Engineering Student, pursuing my integrated degree from National Institute of Technology, Hamirpur, Himachal Pradesh,India. I am 
-							keenly interested in the field of Artificial Intelligence, Electronics, Computer Science, and Communication. Also, I have a good knowledge of Mathematics and Physics.</p>
-							<p>I strongly believe that to achieve Progress in any field of the life, there must be a Passion and Purpose to your cause, and without deviation from the norm, Progress is not Possible.</p>
-							<p>I love the concept of "Open-Source" and actively do work in order to support and promote the same culture, Do check some of my <a href="#work">WORK</a>.</p>
+							<h2 class="major">New Project Ideas</h2>
+							<blockquote>This page contains the New Project Ideas and discussion on the idea and its approach.
+							</blockquote>
+							<p>Following is the list of New Project Ideas.
+								<ul>
+									<li>Sound to Image Conversion</li>
+									<li>Non-Gaussian and Multiplicative Noise removal from Sattelite Images using Deeplearning</li>
+								</ul>
+							</p>
+							<hr/>
+							<h3>Sound to Image Conversion</h3>
+							<span class="image main"><img src="images/s2i.jpg" alt="" width="400" height="200"/></span>
+							<p>
+								This project is based on the new approach and idea of pixel encodations from the sound. basically the techniques will help in converting 1D data to a 2D data. 
+								The basic approach is explained here. 
+								The image we will be making can be of n by n dimensions for example 128 by 128, and in addition to this, it will be including the 3 color channels i.e. RGB.
+								So in all, it will be a numpy array of n,n,3 dimensions...
+								In order to make this we need to obtain the 3 types of information from the sound sample, which can be done by using the following encoding technique ( #proposed_by_me ) -->
+								F --> Max. Frequency in the sound sample or the filtered sound sample i.e. noise removed sample.
+								A --> Max Amplitude in that filtered Sound Sample.
+								L --> Length of that sound Sample.
+								I chose thees three properties because converting the back of that image to the sound will be much easier if we have this information encoded into the channels itself.
+								Now, let us suppose we have a soundtrack of length L in the time domain and we want to make a 128 by a 128-dimensional image so we need to sample that sound in 128x128 = 16384 samples.
+								These segmented samples will be used to extract the 3 defined FAL values from them and once these are extracted then we will be placing this linear array information F, A, L into the 
+								image by using a special mathematical continuous looping technique, which is much efficient than linear arrangement.
+								The link for this technique and utilization can be accessed by clicking on the button below below:
+								<ul class="actions">
+									<li><a href="https://youtu.be/3s7h2MHQtxc" class="button">Hilbert Curves</a></li>
+								</ul>
+
+								Also, this will be fun to see if we can recover the same sound from the generated image and if the image generated can make any sense or what sounds make what kind of image with this encoding.
+								It will also be interesting to see if one/i can also come out with different encoding techniques/methods/algorithms in future.
+							</p>
+							<hr/>
+							<h3>Non-Gaussian and Multiplicative Noise removal from Sattelite Images using Deeplearning</h3>
+							<span class="image main"><img src="images/sattelite.jpg" alt="" width="400" height="200"/></span>
+							<p>
+								This is a project and a researchpaper idea, and is under study for now, there is not any theory proposed yet but will be updated soon.
+							</p>
 						</article>
 
 						<!--Medical-->
 						<article id="medical">
-							<h2 class="major">Projects Under Development</h2>
-							<span class="image main"><img src="images/about3.jpg" alt="" width="400" height="200"/></span>
-							<p>Welcome, this is the portfolio for Divyanshu Bhaik, you can also call me DV. My portfolio will help you take a quick look over my skill set and knowledge.</p>
-							<p>I am an Electronics and Communication Engineering Student, pursuing my integrated degree from National Institute of Technology, Hamirpur, Himachal Pradesh,India. I am 
-							keenly interested in the field of Artificial Intelligence, Electronics, Computer Science, and Communication. Also, I have a good knowledge of Mathematics and Physics.</p>
-							<p>I strongly believe that to achieve Progress in any field of the life, there must be a Passion and Purpose to your cause, and without deviation from the norm, Progress is not Possible.</p>
-							<p>I love the concept of "Open-Source" and actively do work in order to support and promote the same culture, Do check some of my <a href="#work">WORK</a>.</p>
+							<h2 class="major">Projects in feild of Medical</h2>
+							<blockquote>This page contains the Projects related to feild of medical science or the projects that might be helpful for medical purposes.
+							</blockquote>
+							<p>Following is the list of Projects completed.
+								<ul>
+									<li>Lung Cancer</li>
+									<li>Text to Braille</li>
+								</ul>
+							</p>
+							<hr/>
+							<h3>Lung Cancer</h3>
+							<span class="image main"><img src="images/lung_cancer.jpg" alt="" width="400" height="200"/></span>
+							<p>
+								This project was a part of a internship that i did under my college during lockdown. In this project i with my partner first researched on 
+								lungs segmentation from the radiograpich images by using watershed algorithm and then once we were sucessfull in segmenting the lungs from the image, we 
+								tried three different networks and trained them to classify the given data into cancer and non cancer images of lungs.
+								The github link of the project can be accessed by clicking on the link given below.
+								<ul class="actions">
+									<li><a href="https://github.com/dv-123/Lung_cancer" class="button">Lung Cancer</a></li>
+								</ul>
+							</p>
+							<hr/>
+							<h3>Text to Braille</h3>
+							<span class="image main"><img src="images/braille.jpg" alt="" width="400" height="200"/></span>
+							<p>
+								The project is made for visually challanged people who know how to read the brails codes. The project was made using opencv and py tessaract for image processing 
+								part in which the video input from the camera is first preprocessed to filter out the noise using open cv and then the image was given to the pytasserect pretrained
+								model which then detected the letters from the image. afyer that the detected letters/ words/ sentences/ paragraphs were saved as a word document. then these words are
+								serially transmitted to the arduino uno character by character which is then programed using C++ to move the servo motors according to the braille format of the characters.
+								This project was made by in keeping in mind the idea that there should be an ease of acces of reading material to the vissualy challanged people.
+								The github link of the project can be accessed by clicking on the link given below.
+								<ul class="actions">
+									<li><a href="https://github.com/dv-123/Text-to-braille" class="button">Text to Braille</a></li>
+								</ul>
+							</p>
 						</article>
 
 						<!--Communication-->
 						<article id="communication">
-							<h2 class="major">Projects Under Development</h2>
+							<h2 class="major">Wire-less Communication</h2>
 							<span class="image main"><img src="images/about3.jpg" alt="" width="400" height="200"/></span>
 							<p>Welcome, this is the portfolio for Divyanshu Bhaik, you can also call me DV. My portfolio will help you take a quick look over my skill set and knowledge.</p>
 							<p>I am an Electronics and Communication Engineering Student, pursuing my integrated degree from National Institute of Technology, Hamirpur, Himachal Pradesh,India. I am 
