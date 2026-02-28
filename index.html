@@ -2,21 +2,125 @@
 
 <html>
 	<head>
-		<title>MY_Portfolio</title>
+		<title>Divyanshu Bhaik | AI Developer &amp; ECE Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Portfolio of Divyanshu Bhaik — AI Developer, Robotics enthusiast and ECE Engineer from NIT Hamirpur." />
+		<meta property="og:title" content="Divyanshu Bhaik | AI Developer &amp; ECE Engineer" />
+		<meta property="og:description" content="Portfolio of Divyanshu Bhaik — AI Developer, Robotics enthusiast and ECE Engineer from NIT Hamirpur." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://dv-123.github.io/" />
+		<link rel="icon" type="image/png" href="images/logo2.png" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			.verticalhorizontal {
-    			display: table-cell;
-    			height: 150px;
-    			text-align: center;
-    			width: 600px;
-    			vertical-align: middle;
+			/* Accent color */
+			:root { --accent: #4fc3f7; }
+			h2.major, h3.major { border-bottom-color: var(--accent) !important; }
+			a { color: var(--accent); }
+			.button.primary { background-color: var(--accent); border-color: var(--accent); }
+
+			/* Remove vertical connector lines between header sections */
+			#header > *:before { display: none; }
+			/* Keep the line below the logo */
+			#header > .content:before { display: block; }
+			/* Remove center divider line added by JS for even nav items */
+			#header nav.use-middle:after { display: none; }
+
+			/* 4-column grid nav so both rows align */
+			#header nav ul {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				border-radius: 4px;
+				min-width: 36rem;
 			}
-			img {
+			#header nav ul li {
+				border-left: solid 1px #ffffff;
+			}
+			#header nav ul li:nth-child(4n+1) {
+				border-left: 0;
+			}
+			#header nav ul li:nth-child(n+5) {
+				border-top: solid 1px rgba(255,255,255,0.4);
+			}
+			#header nav ul li a {
+				text-align: center;
+				padding: 0;
+				min-width: 0;
+			}
+
+
+			/* Profile image */
+			.profile_image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
 				border-radius: 50%;
+				display: block;
+			}
+			.verticalhorizontal img {
+				border-radius: 50%;
+			}
+
+			/* Responsive profile layout in Resume */
+			.verticalhorizontal {
+				display: flex;
+				justify-content: center;
+				margin-bottom: 1em;
+			}
+			.verticalhorizontal img {
+				width: 130px;
+				height: 130px;
+				object-fit: cover;
+			}
+
+			/* Skill tags */
+			.skill-category { margin-bottom: 1.2em; }
+			.skill-category > strong {
+				display: block;
+				margin-bottom: 0.5em;
+				font-size: 0.8em;
+				text-transform: uppercase;
+				letter-spacing: 0.1em;
+				opacity: 0.7;
+			}
+			.skill-tags { display: flex; flex-wrap: wrap; gap: 0.4em; }
+			.tag {
+				background: rgba(255,255,255,0.1);
+				border: 1px solid rgba(255,255,255,0.25);
+				border-radius: 3px;
+				padding: 0.25em 0.6em;
+				font-size: 0.82em;
+			}
+
+			/* Work section project cards */
+			.work-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 1em;
+				margin: 1em 0 1.5em;
+			}
+			.work-card {
+				border: 1px solid rgba(255,255,255,0.2);
+				border-radius: 4px;
+				overflow: hidden;
+				text-decoration: none;
+				display: block;
+				transition: border-color 0.2s;
+			}
+			.work-card:hover { border-color: var(--accent); }
+			.work-card img {
+				width: 100%;
+				height: 90px;
+				object-fit: cover;
+				border-radius: 0;
+				display: block;
+			}
+			.work-card-info { padding: 0.5em 0.7em; }
+			.work-card-info h4 { margin: 0 0 0.2em; font-size: 0.85em; }
+			.work-card-info p { margin: 0; font-size: 0.78em; opacity: 0.75; }
+			@media screen and (max-width: 640px) {
+				.work-grid { grid-template-columns: 1fr; }
 			}
 		</style>
 	</head>
@@ -28,7 +132,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="profile_image"><img src="images/logo2.png" alt="Paris" 
+							<span class="profile_image"><img src="images/logo2.png" alt="Divyanshu Bhaik"
 								width="86" height="86" /></span>
 						</div>
 						<div class="content">
@@ -45,6 +149,10 @@
 								<li><a href="#work">Work</a></li>
 								<li><a href="#resume">Resume</a></li>
 								<li><a href="#contact">Contact</a></li>
+								<li><a href="Projects/Project.html">Projects</a></li>
+								<li><a href="Internships/internships.html">Internships</a></li>
+								<li><a href="Academic/academic.html">Academic</a></li>
+								<li><a href="Blogs/Blogs.html">Blogs</a></li>
 							</ul>
 						</nav>
 					</header>
@@ -57,7 +165,7 @@
 								<h2 class="major">About</h2>
 								<span class="image main"><img src="images/about3.jpg" alt="" width="400" height="200"/></span>
 								<p>Welcome, this is the portfolio for Divyanshu Bhaik, you can also call me DV. My portfolio will help you take a quick look over my skill set and knowledge.</p>
-								<p>I am an Electronics and Communication Engineering Student, pursuing my integrated degree from National Institute of Technology, Hamirpur, Himachal Pradesh,India. I am 
+								<p>I am an Electronics and Communication Engineering Student, pursuing my integrated degree from National Institute of Technology, Hamirpur, Himachal Pradesh, India. I am
 								keenly interested in the field of Artificial Intelligence, Electronics, Computer Science, and Communication. Also, I have a good knowledge of Mathematics and Physics.</p>
 								<p>I strongly believe that to achieve Progress in any field of the life, there must be a Passion and Purpose to your cause, and without deviation from the norm, Progress is not Possible.</p>
 								<p>I love the concept of "Open-Source" and actively do work in order to support and promote the same culture, Do check some of my <a href="#work">WORK</a>.</p>
@@ -66,77 +174,86 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Work</h2>
-								<span class="image main"><img src="images/Work6.PNG" alt="" width="400" height="200"/></span>
+
+								<h3 class="major">PROJECTS</h3>
+								<div class="work-grid">
+									<a href="Projects/Project.html" class="work-card">
+										<img src="images/Work1.jpg" alt="Projects" />
+										<div class="work-card-info">
+											<h4>Personal Projects</h4>
+											<p>AI, Computer Vision &amp; Electronics</p>
+										</div>
+									</a>
+									<a href="Projects/Project.html" class="work-card">
+										<img src="images/Work2.jpg" alt="Research Projects" />
+										<div class="work-card-info">
+											<h4>Research Work</h4>
+											<p>COVID-19 Detection &amp; more</p>
+										</div>
+									</a>
+								</div>
+								<ul class="actions">
+									<li><a href="Projects/Project.html" class="button small">View All Projects</a></li>
+								</ul>
+
 								<hr/>
-								<p>
-									<h3 class="major">PROJECTS</h3>
-									<p>
-										<blockquote>
-											This part consist of the list of the projects that are made by me.</br>
-											Please click on the Link below for more information.
-										</blockquote>
-										<ul class="actions">
-											<li><a href="Projects/Project.html" class="button small">Projects</a></li>
-										</ul>
-									</p>
-									<hr/>
-									<h3 class="major">INTERNSHIPS</h3>
-									<p>
-										<blockquote>
-											This part consist of the list of internships that i have done.</br>
-											Please click on the Link below for more information.
-										</blockquote>
-										<ul class="actions">
-											<li><a href="Internships/internships.html" class="button small">Internships</a></li>
-										</ul>
-									</p>
-									<hr/>
-									<h3 class="major">ACADEMIC</h3>
-									<p>
-										<blockquote>
-											This part consist of the acadamic work that is done by me.</br>
-											Please click on the Link below for more information.
-										</blockquote>
-										<ul class="actions">
-											<li><a href="Academic/academic.html" class="button small">Academic</a></li>
-										</ul>
-									</p>
-									<hr/>
-									<h3 class="major">COURSES</h3>
-									<p>
-										<blockquote>
-											This part consist of courses that i have done apart from my Academic sallybus.</br>
-											Please click on the Link below for more information.
-										</blockquote>
-										<ul class="actions">
-											<li><a href="Courses/courses.html" class="button small">Courses</a></li>
-										</ul>
-									</p>
-									<hr/>
-									<h3 class="major">BLOGS</h3>
-									<p>
-										<blockquote>
-											This part consist of the blogs that are made by me.</br>
-											These blogs represents my views on different topics and the way is preffer to perceive different situations.
-											Click the button below to go to my BLOG page.
-										</blockquote>
-										<ul class="actions">
-											<li><a href="Blogs/Blogs.html" class="button small">BLOGS</a></li>
-										</ul>
-									</p>
-								</p>
+								<h3 class="major">INTERNSHIPS</h3>
+								<div class="work-grid">
+									<a href="Internships/internships.html" class="work-card">
+										<img src="images/Work3.jpg" alt="Research Internship" />
+										<div class="work-card-info">
+											<h4>Research Internship</h4>
+											<p>Lung Cancer Detection at NIT Hamirpur</p>
+										</div>
+									</a>
+									<a href="Internships/internships.html" class="work-card">
+										<img src="images/Work4.jpg" alt="Industrial Internship" />
+										<div class="work-card-info">
+											<h4>Industrial Internship</h4>
+											<p>Industry experience &amp; exposure</p>
+										</div>
+									</a>
+								</div>
+								<ul class="actions">
+									<li><a href="Internships/internships.html" class="button small">View Internships</a></li>
+								</ul>
+
+								<hr/>
+								<h3 class="major">ACADEMIC</h3>
+								<blockquote>
+									Academic syllabus, research projects, technical and cultural activities during my time at NIT Hamirpur.
+								</blockquote>
+								<ul class="actions">
+									<li><a href="Academic/academic.html" class="button small">Academic</a></li>
+								</ul>
+
+								<hr/>
+								<h3 class="major">COURSES</h3>
+								<blockquote>
+									Courses completed apart from my academic syllabus — AI, Electronics, Communication, and more.
+								</blockquote>
+								<ul class="actions">
+									<li><a href="Courses/courses.html" class="button small">Courses</a></li>
+								</ul>
+
+								<hr/>
+								<h3 class="major">BLOGS</h3>
+								<blockquote>
+									My blogs represent my views on different topics and the way I prefer to perceive different situations.
+								</blockquote>
+								<ul class="actions">
+									<li><a href="Blogs/Blogs.html" class="button small">BLOGS</a></li>
+								</ul>
 							</article>
 
 						<!-- Resume -->
 							<article id="resume">
 								<h2 class="major">Resume</h2>
 								<span class="verticalhorizontal"><img src="images/profile_3.jpg" alt="Avatar" width="150" height="150"/></span>
-								<p>
-									<h4 style="text-align:center;">DIVYANSHU BHAIK</h4>
-									<h4 style="text-align:center;">Electronics and Communication Engineering</h4>
-								</p>
-								<p>An enthusiastic and driven B. Tech. Student, currently pursuing my degree from National Institute of Technology, Hamirpur. 
-								Pronto considering an Internship in Computer Vision Deep Learning or Electronics and Communication to utilize and develop my Knowledge of AI and 
+								<h4 style="text-align:center;">DIVYANSHU BHAIK</h4>
+								<h4 style="text-align:center;">Electronics and Communication Engineering</h4>
+								<p>An enthusiastic and driven B. Tech. Student, currently pursuing my degree from National Institute of Technology, Hamirpur.
+								Actively seeking an Internship in Computer Vision, Deep Learning or Electronics and Communication to utilize and develop my knowledge of AI and
 								Electronics and Communication Engineering. <br/>
 								You can find me in <a href="#contact">CONTACT</a>.
 								</p>
@@ -144,76 +261,129 @@
 								<h3>EDUCATION</h3>
 								<p>B.Tech. + M.Tech. (Integrated)<br/>
 								<a href="https://nith.ac.in/">National Institute Of Technology, Hamirpur</a><br/>
-								07/2017 - Present | CGPA - 8.77 |Electronics and Communication Engineering
+								07/2017 - Present | CGPA - 8.77 | Electronics and Communication Engineering
 								</p>
 								<hr/>
 								<h3>TECHNICAL SKILLS</h3>
-								<p>
-									<li>PROGRAMING LANGUAGES</li>
-									Python, C/C++ and Julia
-									<li>SIMULATION LANGUAGES</li>
-									System C, Verilog and VHDL
-									<li>SIMULATION SOFTWARE</li>
-									MATLAB, Simulink, COMSOL Multiphysics, ModelSim, EDA Tanner, LabVIEW, Keil uVision5, CST Studio Suite, LT Spice, Eclipse, VS Code, Anaconda and Adobe.
-									<li>MICROPROCESSORS AND MICROCONTROLLERS</li>
-									Microprocessor (Intel 8085,8086), Microcontroller (Intel 8051), Raspberry-Pi(IOT and Automation), Arduino-Uno, Intel Edison, Node-MCU, FPGA (Verilog).
-									<li>CORE SUBJECTS</li>
-									Analog and Digital Electronics, Analog and Digital Communication, Data structures, Neural Network & Fuzzy Logic and Digital Image & Signal Processing.
-									<li>EXTRA COURSES</li>
-									Machine Learning, Deep Learning, Reinforcement Learning, Computer Vision & Algorithms, Data Science and NLP.
-									<li>OPERATING SYSTEM EXPERIENCE</li>
-									Windows, Ubuntu, Raspbian, Kali, iOS and Android.
-									</p>
+								<div class="skill-category">
+									<strong>Programming Languages</strong>
+									<div class="skill-tags">
+										<span class="tag">Python</span>
+										<span class="tag">C</span>
+										<span class="tag">C++</span>
+										<span class="tag">Julia</span>
+									</div>
+								</div>
+								<div class="skill-category">
+									<strong>Simulation Languages</strong>
+									<div class="skill-tags">
+										<span class="tag">System C</span>
+										<span class="tag">Verilog</span>
+										<span class="tag">VHDL</span>
+									</div>
+								</div>
+								<div class="skill-category">
+									<strong>Simulation Software</strong>
+									<div class="skill-tags">
+										<span class="tag">MATLAB</span>
+										<span class="tag">Simulink</span>
+										<span class="tag">COMSOL Multiphysics</span>
+										<span class="tag">ModelSim</span>
+										<span class="tag">EDA Tanner</span>
+										<span class="tag">LabVIEW</span>
+										<span class="tag">Keil uVision5</span>
+										<span class="tag">CST Studio Suite</span>
+										<span class="tag">LT Spice</span>
+										<span class="tag">VS Code</span>
+										<span class="tag">Anaconda</span>
+									</div>
+								</div>
+								<div class="skill-category">
+									<strong>Microprocessors &amp; Microcontrollers</strong>
+									<div class="skill-tags">
+										<span class="tag">Intel 8085</span>
+										<span class="tag">Intel 8086</span>
+										<span class="tag">Intel 8051</span>
+										<span class="tag">Raspberry Pi</span>
+										<span class="tag">Arduino Uno</span>
+										<span class="tag">Intel Edison</span>
+										<span class="tag">Node-MCU</span>
+										<span class="tag">FPGA (Verilog)</span>
+									</div>
+								</div>
+								<div class="skill-category">
+									<strong>Core Subjects</strong>
+									<div class="skill-tags">
+										<span class="tag">Analog Electronics</span>
+										<span class="tag">Digital Electronics</span>
+										<span class="tag">Analog Communication</span>
+										<span class="tag">Digital Communication</span>
+										<span class="tag">Data Structures</span>
+										<span class="tag">Neural Network &amp; Fuzzy Logic</span>
+										<span class="tag">Digital Image &amp; Signal Processing</span>
+									</div>
+								</div>
+								<div class="skill-category">
+									<strong>AI &amp; Machine Learning</strong>
+									<div class="skill-tags">
+										<span class="tag">Machine Learning</span>
+										<span class="tag">Deep Learning</span>
+										<span class="tag">Reinforcement Learning</span>
+										<span class="tag">Computer Vision</span>
+										<span class="tag">Data Science</span>
+										<span class="tag">NLP</span>
+									</div>
+								</div>
+								<div class="skill-category">
+									<strong>Operating Systems</strong>
+									<div class="skill-tags">
+										<span class="tag">Windows</span>
+										<span class="tag">Ubuntu</span>
+										<span class="tag">Raspbian</span>
+										<span class="tag">Kali Linux</span>
+										<span class="tag">iOS</span>
+										<span class="tag">Android</span>
+									</div>
+								</div>
 								<hr/>
 								<h3>PERSONAL PROJECTS</h3>
-								<p>
-									<h4><a href = "https://github.com/dv-123/COVID-19_Detection">COVID-19 Detection (04/2020 - Present)</a></h4>
-									<li>This project is related to the field of Medical Image Processing where the classification of Chest X-ray images into three classes which are Normal, Pneumonia and COVID-19 is done. The
-										concepts of Image Processing, Computer Vision and Algorithms, Deep Learning and Machine Learning is used in this project. </li>
-									<li>The future works includes the completion of the research paper on the same project, improvement of the pipeline used to
-										increase the scores of performance parameters and testing of
-										the pipeline on more transfer learning models.</li>
-									</br>
+								<div>
+									<h4><a href="https://github.com/dv-123/COVID-19_Detection">COVID-19 Detection (04/2020 - Present)</a></h4>
+									<ul>
+										<li>Classification of Chest X-ray images into three classes: Normal, Pneumonia, and COVID-19 using Image Processing, Computer Vision, Deep Learning, and Machine Learning.</li>
+										<li>Future work includes completion of the research paper, improvement of the pipeline performance parameters, and testing on more transfer learning models.</li>
+									</ul>
 									<h4><a href="https://github.com/dv-123/Smart-Road-Assistant">Smart Road Assistant (10/2019 – Present)</a></h4>
-									<li>It is a smart automated electronic device which is designed to
-										predict the possibility of your car crashing into any other vehicle or any other object on the read. This technology is purely automatic and is based on various Deep Learning and Computer Vision Algorithms such as YOLO Algorithm, IOU and Kalman
-										Filter etc.</li>
-									<li>The future developments will include the optimization of algorithm to also work under low light conditions (like when the
-										light source is only head light or street light), improving the
-										time of prediction and practical deployment of the project</li>
-									</br>
+									<ul>
+										<li>A smart automated electronic device designed to predict the possibility of a car crashing into any other vehicle or object on the road, based on YOLO Algorithm, IOU, and Kalman Filter.</li>
+										<li>Future developments include optimization for low-light conditions, improving prediction time, and practical deployment.</li>
+									</ul>
 									<h4><a href="https://github.com/dv-123/Text-to-braille">Text to Braille (01/2019 – 03/2019)</a></h4>
-									<li>This project includes a Deep Learning Character Recognition model with a pipeline implemented at back-end, i used an API from GitHub named Tesseract which implement all the pipeline with model, also the main two 
-										functions - order_points and four_point_transform. This does image pre-processing to make the captured real-time Image/Video look better for the pipeline which gives 2-D image output.</li>
-									<li>The detected characters are then saved as a word document and by using serial characters are also transferred to the arduino.</li>
-									<li>The arduino is programmed in such a way that it convert the input from the script into the related braille format and servo motors are used to make a braille patterns.</li>
-								</p>
+									<ul>
+										<li>A Deep Learning Character Recognition model using Tesseract OCR pipeline with image pre-processing for real-time Image/Video capture.</li>
+										<li>Detected characters are saved as a Word document and transferred to Arduino via serial communication.</li>
+										<li>Arduino converts the input into Braille format using servo motors to create a physical Braille pattern.</li>
+									</ul>
+								</div>
 								<hr/>
 								<h3>CERTIFICATES AND PROJECTS</h3>
-								<p>
+								<ul>
 									<li>CERTIFICATES - <a href="https://www.linkedin.com/in/divyanshu-bhaik-7438a6155/">LinkedIn</a></li>
-								</br>
-									<li>PROJECTS - <a href="https://github.com/dv-123"> GitHub</a></li>
-								</br>
-									You can find detail on all of my work in <a href="#work">WORK</a>
-								</p>
+									<li>PROJECTS - <a href="https://github.com/dv-123">GitHub</a></li>
+								</ul>
+								<p>You can find detail on all of my work in <a href="#work">WORK</a></p>
 								<hr/>
 								<h3>EXPERIENCE</h3>
-								<p>
-									<li>Innovation Head - IRIC</li>
-									Research and Innovation Council | 09/2019 - Present | NIT Hamirpur
-									<li>Coordinator - VIBHAV</li>
-									Technical Club of Departmant | 02/202018 - Present | NIT Hamirpur
-									<li>Joint Technical Secretary - ISTE</li>
-									Indian Society for Technical Education | 09/2018 - Present | NIT Hamirpur
-									<li>Convener - Organization Club</li>
-									Club responsible for organizing events in Institute | 09/2018 - Present | NIT Hamirpur 
-									<li>Member - Rhythmeecz</li>
-									Dance Club of Institute | 09/2017 - 08/2019 | NIT Hamirpur 
-								</p>
+								<ul>
+									<li>Innovation Head - IRIC<br/>Research and Innovation Council | 09/2019 - Present | NIT Hamirpur</li>
+									<li>Coordinator - VIBHAV<br/>Technical Club of Department | 02/2018 - Present | NIT Hamirpur</li>
+									<li>Joint Technical Secretary - ISTE<br/>Indian Society for Technical Education | 09/2018 - Present | NIT Hamirpur</li>
+									<li>Convener - Organization Club<br/>Club responsible for organizing events in Institute | 09/2018 - Present | NIT Hamirpur</li>
+									<li>Member - Rhythmeecz<br/>Dance Club of Institute | 09/2017 - 08/2019 | NIT Hamirpur</li>
+								</ul>
 								<hr/>
 								<h3>SOFT SKILLS</h3>
-								<p>
+								<ul>
 									<li>Event Management</li>
 									<li>Leadership</li>
 									<li>Organisation (Logistics)</li>
@@ -221,16 +391,16 @@
 									<li>Communication</li>
 									<li>Critical Thinking</li>
 									<li>Innovation</li>
-								</p>
+								</ul>
 								<hr/>
 								<h3>INTERESTS</h3>
-								<p>
-									<li>Sports (Playing) - Volleyball & Football</li>
+								<ul>
+									<li>Sports (Playing) - Volleyball &amp; Football</li>
 									<li>Sketching</li>
 									<li>Dancing</li>
 									<li>Gym (Calisthenics)</li>
 									<li>Travelling</li>
-								</p>
+								</ul>
 								<hr/>
 								<h4>You can Download a soft copy of my Resume from here</h4>
 								<ul class="actions">
@@ -241,7 +411,7 @@
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<form method="post" action="mailto: 17MI446@nith.ac.in", enctype="text/plain">
+								<form method="post" action="mailto:bhaik.divyanshu007@gmail.com" enctype="text/plain">
 									<!--action="email.php"-->
 									<div class="fields">
 										<div class="field half">
@@ -278,7 +448,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p> --- DV --- </p>
+						<p>&copy; Divyanshu Bhaik</p>
 					</footer>
 
 			</div>
