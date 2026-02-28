@@ -243,15 +243,16 @@ document.getElementById('contact-form').addEventListener('submit', e => {
 
 // ── THEME TOGGLE ──
 const themeToggle = document.getElementById('theme-toggle');
+const themeIcon   = document.getElementById('theme-icon');
 
 if (localStorage.getItem('theme') === 'light') {
   document.body.classList.add('light');
-  themeToggle.textContent = '🌙';
+  themeIcon.textContent = '🌙';
 }
 
 themeToggle.addEventListener('click', () => {
   document.body.classList.toggle('light');
   const isLight = document.body.classList.contains('light');
-  themeToggle.textContent = isLight ? '🌙' : '☀️';
+  themeIcon.textContent = isLight ? '🌙' : '☀️';
   localStorage.setItem('theme', isLight ? 'light' : 'dark');
 });
