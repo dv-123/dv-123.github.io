@@ -116,6 +116,22 @@
 			@media screen and (max-width: 640px) {
 				.work-grid { grid-template-columns: 1fr; }
 			}
+			/* Restore template's mobile nav layout */
+			@media screen and (max-width: 480px) {
+				#header nav ul {
+					display: flex;
+					flex-direction: column;
+					min-width: 10rem;
+					max-width: 100%;
+				}
+				#header nav ul:first-of-type {
+					border-radius: 4px 4px 0 0;
+					border-bottom: 0;
+				}
+				#header nav ul + ul {
+					border-radius: 0 0 4px 4px;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
