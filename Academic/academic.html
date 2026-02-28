@@ -14,6 +14,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			/* Remove vertical connector lines between header sections */
+			#header > *:before { display: none; }
+			/* Keep the line below the logo */
+			#header > .content:before { display: block; }
+			/* Remove center divider line added by JS for even nav items */
+			#header nav.use-middle:after { display: none; }
 			.profile_image img {
 				width: 100%;
 				height: 100%;

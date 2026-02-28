@@ -14,16 +14,11 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
-			/* Accent color */
-			:root { --accent: #4fc3f7; }
-			h2.major, h3.major { border-bottom-color: var(--accent) !important; }
-			a { color: var(--accent); }
-			.button.primary { background-color: var(--accent); border-color: var(--accent); }
-
 			/* Remove vertical connector lines between header sections */
 			#header > *:before { display: none; }
-			/* Keep the line below the logo */
+			/* Keep the line below the logo and above the nav */
 			#header > .content:before { display: block; }
+			#header > nav:before { display: block; }
 			/* Remove center divider line added by JS for even nav items */
 			#header nav.use-middle:after { display: none; }
 

@@ -14,6 +14,15 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			/* Remove vertical connector lines between header sections */
+			#header > *:before { display: none; }
+			/* Keep the line below the logo */
+			#header > .content:before { display: block; }
+			/* Remove center divider line added by JS for even nav items */
+			#header nav.use-middle:after { display: none; }
+			/* Merge two nav rows into one box */
+			#header nav ul:first-of-type { border-radius: 4px 4px 0 0; border-bottom: 0; }
+			#header nav ul + ul { border-radius: 0 0 4px 4px; border-top: solid 1px rgba(255,255,255,0.4); }
 			.profile_image img {
 				width: 100%;
 				height: 100%;
