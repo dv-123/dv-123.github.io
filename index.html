@@ -27,20 +27,19 @@
 			/* Remove center divider line added by JS for even nav items */
 			#header nav.use-middle:after { display: none; }
 
-			/* 4-column grid nav so both rows align */
+			/* Each nav row: grid with 4 equal columns */
 			#header nav ul {
 				display: grid;
 				grid-template-columns: repeat(4, 1fr);
-				border-radius: 4px;
 				min-width: 36rem;
 			}
-			#header nav ul li {
-				border-left: solid 1px #ffffff;
+			/* Merge the two rows into one box */
+			#header nav ul:first-of-type {
+				border-radius: 4px 4px 0 0;
+				border-bottom: 0;
 			}
-			#header nav ul li:nth-child(4n+1) {
-				border-left: 0;
-			}
-			#header nav ul li:nth-child(n+5) {
+			#header nav ul + ul {
+				border-radius: 0 0 4px 4px;
 				border-top: solid 1px rgba(255,255,255,0.4);
 			}
 			#header nav ul li a {
@@ -149,6 +148,8 @@
 								<li><a href="#work">Work</a></li>
 								<li><a href="#resume">Resume</a></li>
 								<li><a href="#contact">Contact</a></li>
+							</ul>
+							<ul>
 								<li><a href="Projects/Project.html">Projects</a></li>
 								<li><a href="Internships/internships.html">Internships</a></li>
 								<li><a href="Academic/academic.html">Academic</a></li>
