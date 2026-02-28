@@ -77,28 +77,6 @@ nav.scrolled { border-bottom-color: var(--border); }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .hamburger span { width: 24px; height: 2px; background: var(--muted2); border-radius: 2px; transition: all 0.3s; }
 
-/* ── HERO AVATAR ── */
-.hero-avatar {
-  width: 110px; height: 110px;
-  border-radius: 50%;
-  margin: 0 auto 1.75rem;
-  padding: 3px;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  box-shadow: 0 0 32px rgba(56, 189, 248, 0.2);
-}
-.hero-avatar-inner {
-  width: 100%; height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-  background: var(--bg3);
-}
-.hero-avatar-inner img {
-  width: 100%; height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-}
-
 /* ── HERO ── */
 #hero {
   min-height: 100vh;
